@@ -1,0 +1,65 @@
+<html>
+<head>
+<title>Percentages.java</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<style type="text/css">
+.s0 { color: #cf8e6d;}
+.s1 { color: #bcbec4;}
+.s2 { color: #bcbec4;}
+.s3 { color: #7a7e85;}
+.s4 { color: #2aacb8;}
+.s5 { color: #6aab73;}
+</style>
+</head>
+<body bgcolor="#191a1c">
+<table CELLSPACING=0 CELLPADDING=5 COLS=1 WIDTH="100%" BGCOLOR="#606060" >
+<tr><td><center>
+<font face="Arial, Helvetica" color="#000000">
+Percentages.java</font>
+</center></td></tr></table>
+<pre><span class="s0">import </span><span class="s1">java</span><span class="s2">.</span><span class="s1">util</span><span class="s2">.</span><span class="s1">Scanner</span><span class="s2">;</span>
+
+<span class="s3">/* 
+Module 3 In-Class Activity: METHODS PRACTICE 
+Program: Percentages.java 
+*/</span>
+
+<span class="s0">public class </span><span class="s1">Percentages </span><span class="s2">{</span>
+
+    <span class="s3">// TODO 1: Create computePercent method</span>
+    <span class="s0">public static void </span><span class="s1">computePercent</span><span class="s2">(</span><span class="s0">double </span><span class="s1">first</span><span class="s2">, </span><span class="s0">double </span><span class="s1">second</span><span class="s2">) {</span>
+
+        <span class="s0">if </span><span class="s2">(</span><span class="s1">second </span><span class="s2">== </span><span class="s4">0</span><span class="s2">) {</span>
+            <span class="s1">System</span><span class="s2">.</span><span class="s1">out</span><span class="s2">.</span><span class="s1">println</span><span class="s2">(</span><span class="s5">&quot;Cannot compute percentage because division by zero is not allowed.&quot;</span><span class="s2">);</span>
+            <span class="s0">return</span><span class="s2">;</span>
+        <span class="s2">}</span>
+
+        <span class="s0">double </span><span class="s1">percent </span><span class="s2">= (</span><span class="s1">first </span><span class="s2">/ </span><span class="s1">second</span><span class="s2">) * </span><span class="s4">100</span><span class="s2">;</span>
+
+        <span class="s1">System</span><span class="s2">.</span><span class="s1">out</span><span class="s2">.</span><span class="s1">printf</span><span class="s2">(</span><span class="s5">&quot;%.1f is %.1f percent of %.1f%n&quot;</span><span class="s2">,</span>
+                <span class="s1">first</span><span class="s2">, </span><span class="s1">percent</span><span class="s2">, </span><span class="s1">second</span><span class="s2">);</span>
+    <span class="s2">}</span>
+
+    <span class="s0">public static void </span><span class="s1">main</span><span class="s2">(</span><span class="s1">String</span><span class="s2">[] </span><span class="s1">args</span><span class="s2">) {</span>
+
+        <span class="s1">Scanner input </span><span class="s2">= </span><span class="s0">new </span><span class="s1">Scanner</span><span class="s2">(</span><span class="s1">System</span><span class="s2">.</span><span class="s1">in</span><span class="s2">);</span>
+
+        <span class="s3">// TODO 2: Prompt and read two doubles</span>
+        <span class="s1">System</span><span class="s2">.</span><span class="s1">out</span><span class="s2">.</span><span class="s1">print</span><span class="s2">(</span><span class="s5">&quot;Enter first number: &quot;</span><span class="s2">);</span>
+        <span class="s0">double </span><span class="s1">first </span><span class="s2">= </span><span class="s1">input</span><span class="s2">.</span><span class="s1">nextDouble</span><span class="s2">();</span>
+
+        <span class="s1">System</span><span class="s2">.</span><span class="s1">out</span><span class="s2">.</span><span class="s1">print</span><span class="s2">(</span><span class="s5">&quot;Enter second number: &quot;</span><span class="s2">);</span>
+        <span class="s0">double </span><span class="s1">second </span><span class="s2">= </span><span class="s1">input</span><span class="s2">.</span><span class="s1">nextDouble</span><span class="s2">();</span>
+
+        <span class="s3">// TODO 3: Call computePercent(first, second)</span>
+        <span class="s1">computePercent</span><span class="s2">(</span><span class="s1">first</span><span class="s2">, </span><span class="s1">second</span><span class="s2">);</span>
+
+        <span class="s3">// TODO 4: Call computePercent(second, first)</span>
+        <span class="s1">computePercent</span><span class="s2">(</span><span class="s1">second</span><span class="s2">, </span><span class="s1">first</span><span class="s2">);</span>
+
+        <span class="s1">input</span><span class="s2">.</span><span class="s1">close</span><span class="s2">();</span>
+    <span class="s2">}</span>
+<span class="s2">}</span>
+</pre>
+</body>
+</html>
